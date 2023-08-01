@@ -48,8 +48,3 @@ Route::resource('/user', 'UserController');
     Route::get('/vop', 'VopController@index')->name('vop');
 
 //});
-
-Route::group(['middleware' => ['auth', 'checkUser:renter']], function(){
-    //Route::resource('/product', 'ProductController');
-    //Route::resource('/user', 'UserController'); 
-});
